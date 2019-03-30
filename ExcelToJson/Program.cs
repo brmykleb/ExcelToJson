@@ -21,6 +21,7 @@ namespace ExcelToJson
 
         private static void UsingOleDb(string inFilePath, string outFilePath, string sheetName)
         {
+            //"HDR=Yes;" indicates that the first row contains column names, not data.
             var connectionString = $@"
                 Provider=Microsoft.ACE.OLEDB.12.0;
                 Data Source={inFilePath};
